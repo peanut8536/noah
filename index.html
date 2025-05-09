@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>프라이빗 라운지 노아</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #0e1a2b;
+      --accent: #e0e0e0;
+      --text-main: #ffffff;
+      --text-sub: #bbbbbb;
+      --font-main: 'Noto Sans KR', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--primary);
+      font-family: var(--font-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    header {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848c?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header .headline {
+      background: rgba(0,0,0,0.6);
+      padding: 2rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(14, 26, 43, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--text-sub);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .list {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .list li {
+      margin-bottom: 10px;
+      list-style: none;
+      position: relative;
+      padding-left: 1.2em;
+    }
+
+    .list li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    .button-fixed  {
+      background: #ffffff10;
+      border: 1px solid #ffffff33;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 600px) {
+      header .headline {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+        margin: 0 10px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  
+.header-reserve-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ffffff22;
+  border: 1px solid #ffffff44;
+  border-radius: 30px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s;
+}
+.header-reserve-button:hover {
+  background-color: #ffffff33;
+}
+
+#about img {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+.testimonial .emoji {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+.testimonial .content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+section {
+  background-color: #0f1926;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  padding: 50px 24px;
+  transition: all 0.3s ease-in-out;
+}
+section:hover {
+  background-color: #121f31;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+section p, .list li {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+nav {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  border-bottom: 1px solid #222;
+}
+
+footer {
+  border-top: 1px solid #333;
+  margin-top: 60px;
+}
+
+a.button-fixed, .header-reserve-button {
+  box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+}
+
+.hero-image {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="#about">소개</a>
+<a href="#service">서비스</a>
+<a href="#stories">이야기</a>
+<a href="#contact">예약</a>
+</nav>
+<header style="background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://i.imgur.com/K3S6pEE.jpg') no-repeat center center / cover;">
+<div class="headline">
+      선택된 이들을 위한 밤,<br/>
+      그 시작과 끝을 조율하는 사람 – <strong>상우</strong>.
+    <br/><a class="header-reserve-button" href="#contact">예약하기</a></div>
+</header>
+<section id="about">
+<h2>About</h2>
+<p>
+      노아의 방주가 그랬듯, 선택된 소수만을 위한 라운지.<br/>
+      번잡한 도심 속, 조용히 이어지는 대화와 안락한 힐링이 머무는 공간으로 초대합니다.
+    </p>
+<p style="margin-top:1rem;">
+      누구를 위한 공간인지, 왜 이 공간이 특별한지.<br/>
+      조용함, 단정함, 맞춤성.<br/>
+      이곳은 비즈니스의 연장선입니다.
+    </p><br/><img alt="룸 이미지" src="https://i.imgur.com/7lflhyc.jpg" width="100%"/><br/><img alt="입구 이미지" src="https://i.imgur.com/x1sXE5T.jpg" width="100%"/>
+</section>
+<section id="service">
+<h2>Service</h2>
+<ul class="list">
+<li>프라이빗 예약제</li>
+<li>고객별 셋업 방식</li>
+<li>방문부터 귀가까지 1:1 매니징</li>
+<li>조용한 비즈니스 미팅 가능</li>
+</ul>
+</section>
+<section id="stories"><h2>Stories</h2><div class="testimonial"><div class="emoji">👨‍⚕️</div><div class="content"><p>30대 의사의 고단한 하루를 리프레쉬하기 위해 방문해주셨습니다.</p><div>⭐⭐⭐⭐⭐</div></div></div><div class="testimonial"><div class="emoji">👔</div><div class="content"><p>지친 눈빛으로 들어오셨던 대표님, 공감과 대화로 인한 회복의 시간. 그 후 다시 웃었습니다.</p><div>⭐⭐⭐⭐⭐</div></div></div><div class="testimonial"><div class="emoji">💼</div><div class="content"><p>출장 중 방문한 임원 고객님, 조용한 대화와 음악으로 하루를 마무리하셨습니다.</p><div>⭐⭐⭐⭐⭐</div></div></div><div class="testimonial"><div class="emoji">🧳</div><div class="content"><p>장거리 미팅을 마친 컨설턴트 고객, 조용한 공간에서 커피와 위스키 한 잔으로 숨을 돌리셨습니다.</p><div>⭐⭐⭐⭐⭐</div></div></div><div class="testimonial"><div class="emoji">👥</div><div class="content"><p>오랜만에 만난 지인들과 함께, 프라이빗한 분위기 속에서 유쾌한 시간을 보내셨습니다.</p><div>⭐⭐⭐⭐⭐</div></div></div></section>
+<section id="contact">
+<h2>Reservation</h2>
+<p>
+      이름 (익명 가능), 날짜/시간, 요청사항을 아래 채널로 전달해주세요.<br/><br/>
+<strong>📞 010-9672-3669</strong><br/>
+<strong>💬 오픈채팅 / 텔레그램 / 시크릿톡 지원</strong>
+</p>
+</section>
+<footer>
+    프라이빗 라운지 노아<br/>
+    운영시간: 오후 7시 ~ 새벽 4시<br/>
+    VIP 전용 · 예약 필수
+  </footer>
+<a class="button-fixed" href="#contact">예약하기</a>
+</body>
+</html>
