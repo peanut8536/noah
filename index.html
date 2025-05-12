@@ -225,7 +225,32 @@ a.button-fixed, .header-reserve-button {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 </style>
-<meta content="ymOHydouezTmr2GOAMhoAC-cc7nmYbDK7HPteGBFpiA" name="google-site-verification"/></head>
+<meta content="ymOHydouezTmr2GOAMhoAC-cc7nmYbDK7HPteGBFpiA" name="google-site-verification"/>
+<style>
+  .contact-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+  .call-btn {
+    background-color: #1e90ff;
+    color: white;
+  }
+  .kakao-btn {
+    background-color: #fee500;
+    color: #000;
+  }
+</style>
+</head>
 <body>
 <nav>
 <a href="#about">소개</a>
@@ -266,14 +291,54 @@ a.button-fixed, .header-reserve-button {
 <p>
       이름 (익명 가능), 날짜/시간, 요청사항을 아래 채널로 전달해주세요.<br/><br/>
 <strong>📞 010-9672-3669</strong><br/>
-<strong>💬 오픈채팅 / 텔레그램 / 시크릿톡 지원</strong>
+
 </p>
-<div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; align-items: center;"><a href="tel:01096723669" style="background-color: #1e90ff; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem;">📞 전화 걸기 (010-9672-3669)</a><a href="https://open.kakao.com/o/sS2qEsvh" style="background-color: #fee500; color: #000; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem;" target="_blank">💬 오픈채팅으로 문의하기</a></div></section>
+<div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; align-items: center;"></div><div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; align-items: center;"><a class="contact-button call-btn" href="tel:01096723669">📞 전화 걸기 (010-9672-3669)</a><a class="contact-button kakao-btn" href="https://open.kakao.com/o/sS2qEsvh" target="_blank">💬 오픈채팅으로 문의하기</a></div></section>
 <footer>
     프라이빗 라운지 노아<br/>
     운영시간: 오후 7시 ~ 새벽 4시<br/>
     VIP 전용 · 예약 필수
   </footer>
 <a class="button-fixed" href="#contact">예약하기</a>
+<style>
+  .floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1e90ff;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    line-height: 60px;
+    transition: background-color 0.3s;
+  }
+  .floating-button:hover {
+    background-color: #005bbb;
+  }
+  .floating-button.hide {
+    display: none;
+  }
+</style>
+<a class="floating-button" href="#contact" id="floatContactBtn" title="예약">
+  💬
+</a>
+<script>
+  window.addEventListener("scroll", function() {
+    var btn = document.getElementById("floatContactBtn");
+    var contact = document.getElementById("contact");
+    var rect = contact.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      btn.classList.add("hide");
+    } else {
+      btn.classList.remove("hide");
+    }
+  });
+</script>
 </body>
 </html>
