@@ -260,8 +260,21 @@ a.button-fixed, .header-reserve-button {
 
   gtag('config', 'AW-11253929131');
 </script>
-
-
+<!-- Google Ads 클릭 전환 스니펫 -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11253929131/50WVCNb4gLkYEKuppfYp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
     
 </head>
