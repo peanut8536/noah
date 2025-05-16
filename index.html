@@ -260,6 +260,25 @@ a.button-fixed, .header-reserve-button {
 
   gtag('config', 'AW-11253929131');
 </script>
+
+    <!-- Event snippet for Website traffic conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11253929131/50WVCNb4gLkYEKuppfYp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+    
 </head>
     
 <body><h1 style="text-align: center; font-size: 1.8rem; margin-top: 40px;">강남 하이퍼블릭의 모든 것,<br/>상우의 라운지에서 경험하세요.</h1>
